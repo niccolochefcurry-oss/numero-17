@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff5f7;
+    color: #4a4a4a;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arabic-text {
+    font-size: 1.5rem;
+    color: #ff4d6d;
+    margin-bottom: 0;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+#heart-btn {
+    font-size: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.1);
+}
+
+.question-box {
+    padding-bottom: 100px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #e0e0e0;
+}
