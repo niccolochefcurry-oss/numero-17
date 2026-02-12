@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per Te ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h2 class="arabic-text">يا حبيبتي</h2> <h1 class="main-title">Ciao [Nome della tua fidanzata]</h1>
+            <p class="fade-in">Ho creato questo piccolo angolo di web solo per noi.</p>
+            <div id="heart-btn" onclick="lanciaCuori()">❤️</div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="card">
+            <p>"Sei la mia persona preferita in tutto il mondo."</p>
+        </div>
+        
+        <div class="question-box">
+            <h3>Mi ami almeno un pochino?</h3>
+            <div class="buttons">
+                <button id="yesBtn" onclick="vittoria()">SÌ, tantissimo!</button>
+                <button id="noBtn" onmouseover="scappa()">No</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function lanciaCuori() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff4d6d', '#ff758f', '#ffb3c1']
+            });
+        }
+
+        function scappa() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function vittoria() {
+            alert("Sapevo che non avresti potuto dire di no! Ti amo ❤️");
+            lanciaCuori();
+        }
+    </script>
+</body>
+</html>
